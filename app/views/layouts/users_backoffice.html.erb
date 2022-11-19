@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EbankApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <h1> --------- USERS BACKOFFICE ------</h1>
+
+    <% if user_signed_in? %>
+      <p>Usuario logados :</p>
+        <%= current_user.email %>
+    <% else %>
+      <p>Usuario não está logado !</p>
+    <% end %>
+
+    
+
+
+  </body>
+</html>
