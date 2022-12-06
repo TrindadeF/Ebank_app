@@ -11,8 +11,8 @@
   </head>
 
   <body>
+    <%= render 'layouts/navbar' %>
     <%= yield %>
-    <h1> --------- USERS BACKOFFICE ------</h1>
 
     <% if user_signed_in? %>
       <p>Usuario logados :</p>
@@ -20,6 +20,7 @@
     <% else %>
       <p>Usuario não está logado !</p>
     <% end %>
+      <%= link_to 'Sair', destroy_user_session_path, :method => :delete %>
 
     
 

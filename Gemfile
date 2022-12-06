@@ -17,6 +17,9 @@ gem 'devise'
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
+# Bootstrap
+gem "bootstrap"
+
 # i18n 
 gem 'rails-i18n', '~> 7.0.0' # For 7.0.0
 
