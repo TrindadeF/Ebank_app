@@ -12,18 +12,10 @@
 
   <body>
     <%= render 'layouts/navbar' %>
-    <%= yield %>
-
-    <% if user_signed_in? %>
+    <%= render 'layouts/sidebar' %>
+     <% if user_signed_in? %>
       <p>Usuario logados :</p>
         <%= current_user.email %>
-    <% else %>
-      <p>Usuario não está logado !</p>
     <% end %>
-      <%= link_to 'Sair', destroy_user_session_path, :method => :delete %>
-
-    
-
-
   </body>
 </html>
